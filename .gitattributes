@@ -1,0 +1,4 @@
+data/chunks.jsonl filter=lfs diff=lfs merge=lfs -text
+chroma_db/chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
+chroma_db/**/*.bin filter=lfs diff=lfs merge=lfs -text
+data/embeddings.npy filter=lfs diff=lfs merge=lfs -text
