@@ -1,8 +1,8 @@
 import json
 import re
 
-INPUT_FILE = "clean_american_novelists.jsonl"
-OUTPUT_FILE = "chunks_by_heading.jsonl"
+INPUT_FILE = "data/clean_american_novelists.jsonl"
+OUTPUT_FILE = "data/chunks.jsonl"
 
 CHUNK_SIZE = 250
 OVERLAP = 40
@@ -119,7 +119,7 @@ def chunk_section(heading: str, body: str, chunk_size: int = CHUNK_SIZE, overlap
     return chunks
 
 
-if __name__ == "__main__":
+def chunk_data():
     n_docs, n_chunks = 0, 0
     sizes = []
 
@@ -147,6 +147,7 @@ if __name__ == "__main__":
                         "doc_id": doc["id"],
                         "chunk_index": doc_chunk_idx,
                         "title": doc["title"],
+                        "source": doc.get("source") or "hugging face",
                         "heading": heading,
                         "url": doc["url"],
                         "text": chunk_text,
@@ -161,3 +162,6 @@ if __name__ == "__main__":
         f"Слів у чанку: min={min(sizes)}, max={max(sizes)}, "
         f"avg={sum(sizes) / len(sizes):.0f}"
     )
+
+if __name__ == "__main__":
+    chunk_data()

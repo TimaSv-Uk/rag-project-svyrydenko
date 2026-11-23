@@ -1,3 +1,4 @@
+from pathlib import Path
 import duckdb
 import json
 import requests
@@ -37,33 +38,41 @@ def get_category_members(category_title: str) -> list:
     return titles
 
 
-if __name__ == "__main__":
-    print("Fetching category titles from Wikipedia API...")
-    cat_19th = get_category_members("19th-century_American_novelists")
-    cat_20th = get_category_members("20th-century_American_novelists")
-    target_titles = sorted(set(cat_19th + cat_20th))
-    print(f"Total target articles found: {len(target_titles)}")
+def load_data():
+    target_titles_save = Path("target_titles.json")
 
-    output_filename = "raw_american_novelists.jsonl"
+    if target_titles_save.exists():
+        print(f"Loading cached titles from {target_titles_save}...")
+        target_titles = json.loads(target_titles_save.read_text(encoding="utf-8"))
+    else:
+        print("Fetching category titles from Wikipedia API...")
+        cat_19th = get_category_members("19th-century_American_novelists")
+        cat_20th = get_category_members("20th-century_American_novelists")
+        target_titles = sorted(set(cat_19th + cat_20th))
+        target_titles_save.write_text(
+            json.dumps(target_titles, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    print(f"Target titles: {len(target_titles)}")
 
     con = duckdb.connect()
     con.execute("SET memory_limit='2GB';")
     con.execute("SET threads=2;")
     con.execute("SET preserve_insertion_order=false;")
 
-    # Small lookup table: the only thing that should live in memory
     con.execute("CREATE TABLE target_titles (title VARCHAR PRIMARY KEY);")
     con.executemany("INSERT INTO target_titles VALUES (?)", [(t,) for t in target_titles])
 
-    # List the parquet shards, then process them one by one
     shards = [r[0] for r in con.execute(
         "SELECT file FROM glob('hf://datasets/wikimedia/wikipedia/20231101.en/*.parquet') ORDER BY file"
     ).fetchall()]
-    print(f"Found {len(shards)} shards")
+    print(f"Found {len(shards)} shards", flush=True)
 
+    found_titles = set()
     found = 0
-    with open(output_filename, "w", encoding="utf-8") as out:
+    with open("raw_american_novelists.jsonl", "w", encoding="utf-8") as out:
         for i, shard in enumerate(shards, 1):
+            print(f"[{i}/{len(shards)}] reading {shard.split('/')[-1]}...", flush=True)
             rows = con.execute(
                 """
                 SELECT id, url, title, text
@@ -72,12 +81,19 @@ if __name__ == "__main__":
                 """,
                 [shard],
             ).fetchall()
-
             for id_, url, title, text in rows:
                 out.write(json.dumps(
                     {"id": id_, "url": url, "title": title, "text": text},
                     ensure_ascii=False) + "\n")
+                found_titles.add(title)
             found += len(rows)
-            print(f"[{i}/{len(shards)}] {shard.split('/')[-1]}: {len(rows)} matches (total {found})")
+            print(f"    {len(rows)} matches (total {found})", flush=True)
 
-    print(f"Saved {found} articles to '{output_filename}'")
+    missing = sorted(set(target_titles) - found_titles)
+    print(f"Saved {found} articles. Target: {len(target_titles)}, missing: {len(missing)}")
+    Path("missing_titles.txt").write_text("\n".join(missing), encoding="utf-8")
+    print("Список відсутніх записано в missing_titles.txt")
+
+if __name__ == "__main__":
+    load_data()
+

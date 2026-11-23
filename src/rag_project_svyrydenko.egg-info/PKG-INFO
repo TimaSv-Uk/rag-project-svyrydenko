@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: rag-project-svyrydenko
+Version: 0.1.0
+Requires-Python: >=3.14
+Requires-Dist: chromadb>=1.5.9
+Requires-Dist: datasets>=5.1.0
+Requires-Dist: duckdb>=2.0.0
+Requires-Dist: ollama>=0.6.3
+Requires-Dist: pandas>=3.1.0
+Requires-Dist: requests>=2.34.2
+Requires-Dist: sentence-transformers>=6.1.0

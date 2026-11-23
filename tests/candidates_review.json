@@ -1,0 +1,332 @@
+[
+  {
+    "id": "q01",
+    "query": "Which American novelists of the early 20th century explored the American Dream and its disillusionment?",
+    "candidates": []
+  },
+  {
+    "id": "q02",
+    "query": "How did F. Scott Fitzgerald portray the Jazz Age and wealth in his novels?",
+    "candidates": [
+      {
+        "chunk_id": "12505972_c0016",
+        "source_title": "F. Scott Fitzgerald",
+        "preview": "Long Island and second novel\naffirmative, Fitzgerald fled to the nearest bar. Mired in debt by the play's failure, Fitzgerald wrote short stories to restore his finances. Fitzgerald viewed his stories as worthless except for \"Winter Dreams\", which he described as his first attempt at the Gatsby idea"
+      },
+      {
+        "chunk_id": "12505972_c0049",
+        "source_title": "F. Scott Fitzgerald",
+        "preview": "Generational zeitgeist\nnew generation in the public's mind. Echoing this assertion, critics John V. A. Weaver and Edmund Wilson insisted that Fitzgerald imbued the Jazz Age generation with the gift of self-consciousness while simultaneously making the public aware of them as a distinct cohort. The p"
+      },
+      {
+        "chunk_id": "12505972_c0051",
+        "source_title": "F. Scott Fitzgerald",
+        "preview": "Wealth inequality\nresponsibilities\". For this reason, critics predicted that much of Fitzgerald's fiction would become timeless social documents that captured the naked venality of the hedonistic Jazz Age. Following Fitzgerald's death, scholars focused on how Fitzgerald's fiction dissects the entren"
+      },
+      {
+        "chunk_id": "12505972_c0014",
+        "source_title": "F. Scott Fitzgerald",
+        "preview": "New York City and the Jazz Age\nFitzgerald worked on his second novel, The Beautiful and Damned, and the couple traveled to his home in St. Paul, Minnesota, to have the child. On October 26, 1921, Zelda gave birth to their daughter and only child Frances Scott \"Scottie\" Fitzgerald. As she emerged fro"
+      },
+      {
+        "chunk_id": "12505972_c0023",
+        "source_title": "F. Scott Fitzgerald",
+        "preview": "Sojourn in Hollywood and Lois Moran\nmarried writer to waver in his sexual devotion to his wife. Fitzgerald later rewrote Rosemary Hoyt—one of the central characters in Tender is the Night—to mirror Moran. Jealous of Fitzgerald and Moran, an irate Zelda set fire to her own expensive clothing in a bat"
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "query": "How does Ernest Hemingway's writing style and major novels reflect war and disillusionment?",
+    "candidates": []
+  },
+  {
+    "id": "q04",
+    "query": "How did John Steinbeck depict working-class struggles and the Great Depression in his novels?",
+    "candidates": []
+  },
+  {
+    "id": "q06",
+    "query": "Which themes define William Faulkner's novels about the American South?",
+    "candidates": [
+      {
+        "chunk_id": "33718_c0000",
+        "source_title": "William Faulkner",
+        "preview": "William Cuthbert Faulkner ( FAWK-nər; né Falkner; September 25, 1897 – July 6, 1962) was an American writer. He is best known for his novels and short stories set in the fictional Yoknapatawpha County, Mississippi, a stand-in for Lafayette County where he spent most of his life. Winner of the 1949 N"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "query": "How did Sinclair Lewis satirize middle-class American society and conformity?",
+    "candidates": [
+      {
+        "chunk_id": "50714_c0007",
+        "source_title": "Sinclair Lewis",
+        "preview": "Nobel Prize\nIn 1930 Lewis won the Nobel Prize in Literature, the first writer from the United States to receive the award, after he had been nominated by Henrik Schück, member of the Swedish Academy. In the academy's presentation speech, special attention was paid to Babbitt. In his Nobel Lecture, L"
+      },
+      {
+        "chunk_id": "50714_c0014",
+        "source_title": "Sinclair Lewis",
+        "preview": "Legacy\nCompared to his contemporaries, Lewis's reputation suffered a precipitous decline among literary scholars throughout the 20th century. Despite his enormous popularity during the 1920s, by the 21st century most of his works had been eclipsed in prominence by other writers with less commercial "
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "query": "What social conventions did Edith Wharton examine in her novels about New York society?",
+    "candidates": [
+      {
+        "chunk_id": "160180_c0000",
+        "source_title": "Edith Wharton",
+        "preview": "Edith Wharton (; born Edith Newbold Jones; January 24, 1862 – August 11, 1937) was an American writer and designer. Wharton drew upon her insider's knowledge of the upper-class New York \"aristocracy\" to portray realistically the lives and morals of the Gilded Age. In 1921, she became the first woman"
+      },
+      {
+        "chunk_id": "160180_c0006",
+        "source_title": "Edith Wharton",
+        "preview": "The \"debutante\" years\nBetween 1880 and 1890, Wharton put her writing aside to participate in the social rituals of the New York upper classes. She keenly observed the social changes happening around her, which she used later in her writing. Wharton officially came out as a debutante to society in 18"
+      },
+      {
+        "chunk_id": "160180_c0003",
+        "source_title": "Edith Wharton",
+        "preview": "Early life\nJones family visited France, Italy, Germany, and Spain. During her travels, the young Edith became fluent in French, German, and Italian. At the age of nine, she suffered from typhoid fever, which nearly killed her, while the family was at a spa in the Black Forest. After the family retur"
+      },
+      {
+        "chunk_id": "160180_c0005",
+        "source_title": "Edith Wharton",
+        "preview": "Early writing\na poem under a pseudonym in the New York World in 1879. In 1880, she had five poems published anonymously in the Atlantic Monthly, an important literary magazine. Despite these early successes, she was not encouraged by her family or her social circle, and though she continued to write"
+      },
+      {
+        "chunk_id": "160180_c0021",
+        "source_title": "Edith Wharton",
+        "preview": "Career\n2018. She collaborated with Marie Tempest to write another play, but the two only completed four acts before Marie decided she was no longer interested in costume plays. One of her earliest literary endeavors (1902) was the translation of the play Es Lebe das Leben (\"The Joy of Living\"), by H"
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "query": "What are the central themes of Ralph Ellison's novel Invisible Man?",
+    "candidates": [
+      {
+        "chunk_id": "43149_c0000",
+        "source_title": "Ralph Ellison",
+        "preview": "Ralph Ellison (March 1, 1913 – April 16, 1994) was an American writer, literary critic, and scholar best known for his novel Invisible Man, which won the National Book Award in 1953.\n\nEllison wrote Shadow and Act (1964), a collection of political, social, and critical essays, and Going to the Territ"
+      },
+      {
+        "chunk_id": "43149_c0008",
+        "source_title": "Ralph Ellison",
+        "preview": "In New York\nprogressed. Published in 1952, Invisible Man explores the theme of a person's search for their identity and place in society, as seen from the perspective of the first-person narrator, an unnamed African American man, first in the Deep South and then in the New York City of the 1930s. In"
+      },
+      {
+        "chunk_id": "43149_c0012",
+        "source_title": "Ralph Ellison",
+        "preview": "Awards and recognition\nnational identity. In 1992, Ellison was awarded a special achievement award from the Anisfield-Wolf Book Awards; his artistic achievements included work as a sculptor, musician, photographer, and college professor as well as his writing output. He taught at Bard College, Rutge"
+      },
+      {
+        "chunk_id": "43149_c0013",
+        "source_title": "Ralph Ellison",
+        "preview": "Legacy and posthumous publications\nAfter Ellison's death, more manuscripts were discovered in his home, resulting in the publication of Flying Home and Other Stories in 1996. In 1999, his second novel, Juneteenth, was published under the editorship of John F. Callahan, a professor at Lewis & Clark C"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "query": "How did Richard Wright address racial injustice in 20th-century American fiction?",
+    "candidates": [
+      {
+        "chunk_id": "43153_c0000",
+        "source_title": "Richard Wright (author)",
+        "preview": "Richard Nathaniel Wright (September 4, 1908 – November 28, 1960) was an American author of novels, short stories, poems, and non-fiction. Much of his literature concerns racial themes, especially related to the plight of African Americans during the late 19th to mid-20th centuries suffering discrimi"
+      },
+      {
+        "chunk_id": "43153_c0006",
+        "source_title": "Richard Wright (author)",
+        "preview": "Childhood in the South\nploy to borrow books from the segregated white library. Using a library card lent by a white coworker, which he presented with forged notes that claimed he was picking up books for the white man, Wright was able to obtain and read books forbidden to black people in the Jim Cro"
+      },
+      {
+        "chunk_id": "43153_c0026",
+        "source_title": "Richard Wright (author)",
+        "preview": "Legacy\nand intellectual history of the United States in the last half of the 20th century. \"Wright was one of the people who made me conscious of the need to struggle,\" said writer Amiri Baraka. During the 1970s and 1980s, scholars published critical essays about Wright in prestigious journals. Rich"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "query": "How did Toni Morrison explore African American history and identity in her novels?",
+    "candidates": [
+      {
+        "chunk_id": "43165_c0029",
+        "source_title": "Toni Morrison",
+        "preview": "Relationship to feminism\nlikely to be killed.\" W. S. Kottiswari writes in Postmodern Feminist Writers (2008) that Morrison exemplifies characteristics of \"postmodern feminism\" by \"altering Euro-American dichotomies by rewriting a history written by mainstream historians\" and by her usage of shifting"
+      },
+      {
+        "chunk_id": "43165_c0016",
+        "source_title": "Toni Morrison",
+        "preview": "Beloved trilogy and the Nobel Prize: 1987–1998\nher Nobel Prize win in 1993. The novelist also appeared three times on Winfrey's show. Winfrey said, \"For all those who asked the question 'Toni Morrison again?'... I say with certainty there would have been no Oprah's Book Club if this woman had not ch"
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "query": "What themes of alienation and youth appear in J. D. Salinger's The Catcher in the Rye?",
+    "candidates": []
+  },
+  {
+    "id": "q13",
+    "query": "How did Theodore Dreiser contribute to American literary naturalism?",
+    "candidates": [
+      {
+        "chunk_id": "44213_c0000",
+        "source_title": "Theodore Dreiser",
+        "preview": "Theodore Herman Albert Dreiser (; August 27, 1871 – December 28, 1945) was an American novelist and journalist of the naturalist school. His novels often featured main characters who succeeded at their objectives despite a lack of a firm moral code, and literary situations that more closely resemble"
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "query": "What role did Upton Sinclair's novels play in exposing industrial and social conditions?",
+    "candidates": [
+      {
+        "chunk_id": "95477_c0005",
+        "source_title": "Upton Sinclair",
+        "preview": "Career\nUpton Sinclair considered himself a poet and dedicated his time to writing poetry. In 1904, Sinclair spent seven weeks in disguise, working undercover in Chicago's meatpacking plants to research his novel, The Jungle (1906), a political exposé that addressed conditions in the plants, as well "
+      },
+      {
+        "chunk_id": "95477_c0001",
+        "source_title": "Upton Sinclair",
+        "preview": "and the book about his campaign for governor as a way to explain why the editors and publishers of the major newspapers in California would not treat seriously his proposals for old age pensions and other progressive reforms.Many of his novels can be read as historical works. Writing during the Prog"
+      },
+      {
+        "chunk_id": "95477_c0015",
+        "source_title": "Upton Sinclair",
+        "preview": "The Jungle\nAct and the Pure Food and Drug Act. At the time, President Theodore Roosevelt characterized Sinclair as a \"crackpot\", writing to William Allen White, \"I have an utter contempt for him. He is hysterical, unbalanced, and untruthful. Three-fourths of the things he said were absolute falsehoo"
+      },
+      {
+        "chunk_id": "95477_c0008",
+        "source_title": "Upton Sinclair",
+        "preview": "Political career\nSinclair broke with the Socialist Party in 1917 and supported the First World War effort. By the 1920s, however, he had returned to the party. In the 1920s, the Sinclairs moved to Monrovia, California, (near Los Angeles), where Sinclair founded the state's chapter of the American Ci"
+      },
+      {
+        "chunk_id": "95477_c0012",
+        "source_title": "Upton Sinclair",
+        "preview": "Personal life\nto Love's Pilgrimage. It was never published. His wife later had a love affair with John Armistead Collier, a theology student from Memphis; they had a son together named Ben. In 1910, the Sinclairs moved to the single-tax village of Arden, Delaware, where they built a house. In 1911, "
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "query": "How did Jack London depict survival, nature, and social class in his fiction?",
+    "candidates": [
+      {
+        "chunk_id": "42978_c0000",
+        "source_title": "Jack London",
+        "preview": "John Griffith Chaney (January 12, 1876 – November 22, 1916), better known as Jack London, was an American novelist, journalist and activist. A pioneer of commercial fiction and American magazines, he was one of the first American authors to become an international celebrity and earn a large fortune "
+      },
+      {
+        "chunk_id": "42978_c0007",
+        "source_title": "Jack London",
+        "preview": "Gold rush and first success\nthe New Park Estate at Santa Clara as well as a local bank. The Bonds, especially Hiram, were active Republicans. Marshall Bond's diary mentions friendly sparring with London on political issues as a camp pastime. London left Oakland with a social conscience and socialist"
+      },
+      {
+        "chunk_id": "42978_c0020",
+        "source_title": "Jack London",
+        "preview": "Suicide debate\nBecause he was using morphine, many older sources describe London's death as a suicide, and some still do. This conjecture appears to be a rumor, or speculation based on incidents in his fiction writings. His death certificate gives the cause as uremia, following acute renal colic.\n\nT"
+      },
+      {
+        "chunk_id": "42978_c0028",
+        "source_title": "Jack London",
+        "preview": "Political views\nhave been popular among the Japanese, who believe he portrayed them positively. In \"Koolau the Leper\", London describes Koolau, who is a Hawaiian leper—and thus a very different sort of \"superman\" than Martin Eden—and who fights off an entire cavalry troop to elude capture, as \"indom"
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "query": "How did Zora Neale Hurston portray Black culture and women's independence in her novels?",
+    "candidates": [
+      {
+        "chunk_id": "34452_c0030",
+        "source_title": "Zora Neale Hurston",
+        "preview": "participate in rituals alongside her research subjects. Another of her original uncensored notes for her autobiography shares her admiration for Biblical characters like King David: \"He was a man after God's own heart, and was quite serviceable in helping God get rid of no-count rascals who were clu"
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "query": "How did John Dos Passos structure his modernist trilogy about early 20th-century America?",
+    "candidates": [
+      {
+        "chunk_id": "258775_c0009",
+        "source_title": "John Dos Passos",
+        "preview": "U.S.A. trilogy\nDos Passos's major work is the U.S.A. trilogy, comprising The 42nd Parallel (1930), 1919 (1932), and The Big Money (1936). Dos Passos used experimental techniques in these novels, incorporating newspaper clippings, autobiography, biography, and fictional realism to paint a vast landsc"
+      },
+      {
+        "chunk_id": "258775_c0008",
+        "source_title": "John Dos Passos",
+        "preview": "Literary career\nwrote: \"I think John Dos Passos has done a great service to his country and the free world by lending his talents to this task. He has revived the heart and mind of Jefferson, not by psychoanalytical lucubrations or soulful gush, but in the main by telling story after story of those "
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "query": "What themes of war and absurdity define Joseph Heller's Catch-22?",
+    "candidates": [
+      {
+        "chunk_id": "9647127_c0000",
+        "source_title": "Joseph Heller",
+        "preview": "Joseph Heller (May 1, 1923 – December 12, 1999) was an American author of novels, short stories, plays, and screenplays. His best-known work is the 1961 novel Catch-22, a satire on war and bureaucracy, whose title has become a synonym for an absurd or contradictory choice. He was nominated in 1972 f"
+      },
+      {
+        "chunk_id": "9647127_c0009",
+        "source_title": "Joseph Heller",
+        "preview": "Other works\nwrote another five novels, each of which took him several years to complete. One of them, Closing Time, revisited many of the characters from Catch-22 as they adjusted to post-war New York. All of the novels sold respectably well, but could not duplicate the success of his first novel. T"
+      },
+      {
+        "chunk_id": "9647127_c0007",
+        "source_title": "Joseph Heller",
+        "preview": "Catch-22\nwho are using their wits to escape the aerial carnage; both are haunted by an omnipresent injured airman, invisible inside a white body cast\". Stating he had never read Falstein's novel, or heard of him, Heller said: \"My book came out in 1961[;] I find it funny that nobody else has noticed "
+      },
+      {
+        "chunk_id": "9647127_c0013",
+        "source_title": "Joseph Heller",
+        "preview": "Later years\nHeller returned to St. Catherine's as a visiting Fellow, for a term, in 1991 and was appointed an Honorary Fellow of the college. In 1998, he released a memoir, Now and Then: From Coney Island to Here, in which he relived his childhood as the son of a deliveryman and offered some details"
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "query": "How did Kurt Vonnegut blend science fiction and anti-war satire in his novels?",
+    "candidates": [
+      {
+        "chunk_id": "16861_c0027",
+        "source_title": "Kurt Vonnegut",
+        "preview": "book was an anti-war novel—\"Yes, I guess\", replied Vonnegut. Starr responded: \"Why don't you write an anti-glacier novel?\" In the novel, Vonnegut's character continues: \"What he meant, of course, is that there would always be wars, that they were as easy to stop as glaciers. I believe that, too. And"
+      },
+      {
+        "chunk_id": "16861_c0028",
+        "source_title": "Kurt Vonnegut",
+        "preview": "men.\" Vonnegut made a number of comparisons in Slaughterhouse-Five between Dresden and the bombing of Hiroshima and wrote in Palm Sunday (1991), \"I learned how vile that religion of mine could be when the atomic bomb was dropped on Hiroshima.\" Nuclear war, or at least deployed nuclear arms, is menti"
+      },
+      {
+        "chunk_id": "16861_c0033",
+        "source_title": "Kurt Vonnegut",
+        "preview": "up designs for television cameras and transmitters and receivers. Then she got money from her very rich mom to manufacture these satanic devices, which made imaginations redundant. They were instantly popular because the shows were so attractive and no thinking was involved ... Generations of Booboo"
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "query": "How did Willa Cather depict frontier life and immigrants on the American Great Plains?",
+    "candidates": [
+      {
+        "chunk_id": "164156_c0024",
+        "source_title": "Willa Cather",
+        "preview": "Literary style and reception\nby either pointing to the extreme effects of her apparently simple Romanticism or acknowledging her own \"middle ground\": She had formed and matured her ideas on art before she wrote a novel. She had no more reason to follow Gertrude Stein and James Joyce, whose work she "
+      },
+      {
+        "chunk_id": "164156_c0004",
+        "source_title": "Willa Cather",
+        "preview": "Early life and education\nearned a Pulitzer Prize for his writing. She changed her plans from studying science with the goal of becoming a physician, instead graduating with a Bachelor of Arts in English in 1895. Cather's time in Nebraska, still considered a frontier state, was a formative experience"
+      }
+    ]
+  }
+]
