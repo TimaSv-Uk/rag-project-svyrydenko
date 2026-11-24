@@ -43,12 +43,12 @@ def top_words(path, k=20):
 
 
 def print_dataset_stats():
-    print(count_headings("raw_american_novelists.jsonl"))
+    print(count_headings("data/raw_american_novelists.jsonl"))
 
-    n, avg = chunk_stats("chunks_by_heading.jsonl")
+    n, avg = chunk_stats("data/chunks.jsonl")
     print(f"Chunks: {n}, average size: {avg:.1f} words (~{avg * 1.3:.0f} tokens)")
 
-    for word, count in top_words("clean_american_novelists.jsonl"):
+    for word, count in top_words("data/clean_american_novelists.jsonl"):
         print(word, count)
 if __name__ == "__main__":
     print_dataset_stats()

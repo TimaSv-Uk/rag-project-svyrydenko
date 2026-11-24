@@ -38,7 +38,7 @@ def get_category_members(category_title: str) -> list:
     return titles
 
 
-def load_data():
+def download_data():
     target_titles_save = Path("target_titles.json")
 
     if target_titles_save.exists():
@@ -95,5 +95,5 @@ def load_data():
     print("Список відсутніх записано в missing_titles.txt")
 
 if __name__ == "__main__":
-    load_data()
+    download_data()
 

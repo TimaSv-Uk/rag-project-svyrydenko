@@ -84,7 +84,7 @@ def append_api_to_source(src_path: Path = SRC, api_path: Path = OUT) -> int:
     print(f"Додано {added_count} статей з {api_path} у {src_path}.")
     return added_count
 
-def load_missing():
+def download_missing_data():
     existing = load_existing_titles(SRC)
     titles = [t.strip() for t in MISSING.read_text(encoding="utf-8").splitlines() if t.strip()]
     print(f"Запитів: {len(titles)}, у дампі вже є: {len(existing)}", flush=True)
@@ -142,4 +142,4 @@ def load_missing():
     append_api_to_source(SRC, OUT)
 
 if __name__ == "__main__":
-    load_missing()
+    download_missing_data()

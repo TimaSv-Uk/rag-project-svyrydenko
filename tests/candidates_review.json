@@ -328,5 +328,38 @@
         "preview": "Early life and education\nearned a Pulitzer Prize for his writing. She changed her plans from studying science with the goal of becoming a physician, instead graduating with a Bachelor of Arts in English in 1895. Cather's time in Nebraska, still considered a frontier state, was a formative experience"
       }
     ]
+  },
+  {
+    "id": "q21",
+    "query": "When and where did Arthur Laurents die?",
+    "candidates": [
+      {
+        "chunk_id": "2999_c0011",
+        "source_title": "Arthur Laurents",
+        "preview": "Death\nLaurents died from complications of pneumonia at his home in Manhattan on May 5, 2011, aged 93. Following a long tradition, Broadway theatre lights were dimmed at 8 p.m. on May 6, 2011, for one minute in his memory. His ashes were buried alongside those of Tom Hatcher in a memorial bench in Qu"
+      }
+    ]
+  },
+  {
+    "id": "q22",
+    "query": "Which musical won Arthur Laurents the Tony Award for Best Musical?",
+    "candidates": [
+      {
+        "chunk_id": "2999_c0005",
+        "source_title": "Arthur Laurents",
+        "preview": "Theatre\nwas on tour with Fancy Free, Laurents continued to write for the radio but was becoming discontented with the medium. In 1962, Laurents directed I Can Get It for You Wholesale, which helped to turn then-unknown Barbra Streisand into a star. His next project was the stage musical Anyone Can W"
+      }
+    ]
+  },
+  {
+    "id": "q23",
+    "query": "What wartime job did Arthur Laurents have in the U.S. Army?",
+    "candidates": [
+      {
+        "chunk_id": "2999_c0002",
+        "source_title": "Arthur Laurents",
+        "preview": "Early life\nShirley Booth in the lead role. It was Laurents' first professional credit. The show's success led to him being hired to write scripts for various radio shows, among them Lux Radio Theater. Laurents' career was interrupted when he was drafted into the U.S. Army in the middle of World War "
+      }
+    ]
   }
 ]

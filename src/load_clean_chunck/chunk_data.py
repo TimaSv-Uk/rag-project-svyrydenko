@@ -6,88 +6,62 @@ OUTPUT_FILE = "data/chunks.jsonl"
 
 CHUNK_SIZE = 250
 OVERLAP = 40
+MIN_CHUNK_WORDS = 30
+
+HEADING_MARK = re.compile(r"^=+\s*(.+?)\s*=+$")
 
 
-def is_heading(line: str) -> bool:
-    """Heuristically determines if a single line is a Wikipedia section heading."""
-    line = line.strip()
-    if not line:
-        return False
-    # Headings are short (usually 1-6 words, under 60 chars)
+def is_heading_line(line: str, lines: list[str], i: int) -> bool:
+    """Заголовок без розмітки: короткий рядок без розділових знаків у кінці,
+    за яким іде абзац тексту."""
     if len(line) > 60 or len(line.split()) > 8:
         return False
-    # Headings don't end with sentence punctuation or list separators
     if line[-1] in ".!?:;,\"'”’)-–—":
         return False
-    # Exclude bullet/list items that use dashes (e.g., "West Side Story – 1957")
     if " – " in line or " - " in line:
         return False
-    # Must start with an uppercase letter or digit
     if not line[0].isupper() and not line[0].isdigit():
         return False
-    return True
+    nxt = next((l.strip() for l in lines[i + 1:] if l.strip()), "")
+    return len(nxt) > 60
 
 
-def is_categories_block(block: str) -> bool:
-    """Detects the trailing Wikipedia categories list (many short lines, no punctuation)."""
-    lines = [l.strip() for l in block.split("\n") if l.strip()]
-    if len(lines) < 5:
-        return False
-    # Category lines are short, have no ending periods, and rarely contain long prose
-    avg_len = sum(len(l) for l in lines) / len(lines)
-    no_periods = sum(1 for l in lines if not l.endswith(".")) / len(lines)
-    return avg_len < 45 and no_periods > 0.9
-
-
-def parse_wiki_sections(doc_text: str):
-    """Groups paragraphs under their true Wikipedia headings."""
-    blocks = doc_text.split("\n\n")
+def split_sections(doc_text: str) -> list[tuple[str, str]]:
+    """Розбиває текст документа на (заголовок, тіло) по рядках.
+    Підтримує і розмітку == Заголовок ==, і простий рядок-заголовок."""
     sections = []
-    current_heading = "Introduction"
-    current_paragraphs = []
+    heading = "Introduction"
+    buf: list[str] = []
 
-    for i, block in enumerate(blocks):
-        block = block.strip()
-        if not block:
+    lines = doc_text.split("\n")
+    for i, raw in enumerate(lines):
+        line = raw.strip()
+        if not line:
             continue
 
-        # Check if the final block is the Wikipedia categories dump
-        if i == len(blocks) - 1 and is_categories_block(block):
-            if current_paragraphs or current_heading != "Introduction":
-                sections.append((current_heading, "\n\n".join(current_paragraphs)))
-            sections.append(("Categories", block))
-            return sections
-
-        lines = block.split("\n", 1)
-        first_line = lines[0].strip()
-
-        # Case 1: Block starts with a heading (either standalone like "Career" or attached like "Early life\nBorn...")
-        if is_heading(first_line):
-            # Save the accumulated section before starting the new one
-            if current_paragraphs or current_heading != "Introduction":
-                sections.append((current_heading, "\n\n".join(current_paragraphs)))
-
-            current_heading = first_line
-            current_paragraphs = []
-
-            # If there is body text attached right after the heading via single \n
-            if len(lines) > 1 and lines[1].strip():
-                current_paragraphs.append(lines[1].strip())
+        m = HEADING_MARK.match(line)
+        if m:
+            name = m.group(1)
+        elif is_heading_line(line, lines, i):
+            name = line
         else:
-            # Case 2: Regular paragraph belonging to the current_heading
-            current_paragraphs.append(block)
+            buf.append(line)
+            continue
 
-    # Flush the last remaining section
-    if current_paragraphs or current_heading != "Introduction":
-        sections.append((current_heading, "\n\n".join(current_paragraphs)))
+        if buf:
+            sections.append((heading, " ".join(buf)))
+        heading = name
+        buf = []
 
+    if buf:
+        sections.append((heading, " ".join(buf)))
     return sections
 
 
 def chunk_section(heading: str, body: str, chunk_size: int = CHUNK_SIZE, overlap: int = OVERLAP):
-    """Chunks a section's text, preserving the heading context in each chunk."""
-    if not body:
-        return [heading]
+    """Ділить тіло секції на чанки, додаючи заголовок на початок кожного."""
+    if not body or not body.strip():
+        return []
 
     words = body.split()
     heading_words = heading.split() if heading != "Introduction" else []
@@ -120,7 +94,7 @@ def chunk_section(heading: str, body: str, chunk_size: int = CHUNK_SIZE, overlap
 
 
 def chunk_data():
-    n_docs, n_chunks = 0, 0
+    n_docs, n_chunks, n_skipped = 0, 0, 0
     sizes = []
 
     with (
@@ -128,20 +102,20 @@ def chunk_data():
         open(OUTPUT_FILE, "w", encoding="utf-8") as fout,
     ):
         for line in fin:
+            if not line.strip():
+                continue
             doc = json.loads(line)
             n_docs += 1
 
-            sections = parse_wiki_sections(doc["text"])
+            sections = split_sections(doc["text"])
             doc_chunk_idx = 0
 
             for heading, body in sections:
-                # Optional: skip empty sections (like "Directing", "References") or "Categories" if unwanted
-                # if not body or heading == "Categories":
-                #     continue
+                for chunk_text in chunk_section(heading, body):
+                    if len(chunk_text.split()) < MIN_CHUNK_WORDS:
+                        n_skipped += 1
+                        continue
 
-                section_chunks = chunk_section(heading, body)
-
-                for chunk_text in section_chunks:
                     record = {
                         "chunk_id": f"{doc['id']}_c{doc_chunk_idx:04d}",
                         "doc_id": doc["id"],
@@ -157,11 +131,13 @@ def chunk_data():
                     n_chunks += 1
                     doc_chunk_idx += 1
 
-    print(f"Документів: {n_docs}, чанків: {n_chunks}")
-    print(
-        f"Слів у чанку: min={min(sizes)}, max={max(sizes)}, "
-        f"avg={sum(sizes) / len(sizes):.0f}"
-    )
+    print(f"Документів: {n_docs}, чанків: {n_chunks}, відкинуто коротких: {n_skipped}")
+    if sizes:
+        print(
+            f"Слів у чанку: min={min(sizes)}, max={max(sizes)}, "
+            f"avg={sum(sizes) / len(sizes):.0f}"
+        )
+
 
 if __name__ == "__main__":
     chunk_data()
